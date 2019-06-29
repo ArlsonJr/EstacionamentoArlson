@@ -1,0 +1,63 @@
+﻿@model IEnumerable<EstacionamentoArlson.Models.Estacionamento>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Preco.CodigoPreco)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Placa)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TempoCobrado)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ValorTotal)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Entrada)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Saida)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Preco.CodigoPreco)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Placa)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TempoCobrado)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ValorTotal)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Entrada)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Saida)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.CodigoEstacionamento }) |
+            @Html.ActionLink("Details", "Details", new { id=item.CodigoEstacionamento }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.CodigoEstacionamento })
+        </td>
+    </tr>
+}
+
+</table>

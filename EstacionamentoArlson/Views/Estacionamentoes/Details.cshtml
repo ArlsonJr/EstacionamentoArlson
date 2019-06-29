@@ -1,0 +1,66 @@
+﻿@model EstacionamentoArlson.Models.Estacionamento
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Estacionamento</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Preco.CodigoPreco)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Preco.CodigoPreco)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Placa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Placa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TempoCobrado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TempoCobrado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ValorTotal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ValorTotal)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Entrada)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Entrada)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Saida)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Saida)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.CodigoEstacionamento }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

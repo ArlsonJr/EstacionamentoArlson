@@ -1,0 +1,112 @@
+﻿@model EstacionamentoArlson.Models.Preco
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Preco</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Segunda)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Segunda)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Terca)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Terca)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Quarta)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Quarta)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Quinta)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Quinta)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Sexta)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Sexta)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Sabado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Sabado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Domingo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Domingo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HoraInicial)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HoraInicial)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HoraFinal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HoraFinal)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ValorHora)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ValorHora)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ValorHoraAdicional)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ValorHoraAdicional)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

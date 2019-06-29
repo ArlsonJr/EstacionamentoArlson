@@ -1,0 +1,93 @@
+﻿@model IEnumerable<EstacionamentoArlson.Models.Preco>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Segunda)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Terca)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Quarta)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Quinta)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Sexta)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Sabado)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Domingo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HoraInicial)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HoraFinal)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ValorHora)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ValorHoraAdicional)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Segunda)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Terca)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Quarta)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Quinta)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Sexta)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Sabado)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Domingo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HoraInicial)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HoraFinal)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ValorHora)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ValorHoraAdicional)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.CodigoPreco }) |
+            @Html.ActionLink("Details", "Details", new { id=item.CodigoPreco }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.CodigoPreco })
+        </td>
+    </tr>
+}
+
+</table>
